@@ -1,5 +1,5 @@
-from std_msgs.msg import String
 import rospy
+from std_msgs.msg import String
 
 #Creazione del topic con la classe Publisher
 pub = rospy.Publisher('chatter', String, queue_size=10) #Nome Topic, Tipologia messaggio, Buffer
