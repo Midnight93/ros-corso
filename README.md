@@ -271,20 +271,20 @@ Args: name
 
 
 What is the command that shows the content of message turtlesim/Kill of the /kill service?
-
+```
 rosservice info /kill
-
+```
 Spaw one additional turtle called tsim1. Write the command. 
 
 Spaw one additional turtle called tsim1. Write the command. 
-
+```
 rosservice call /spawn 7 7  0.55 tsim1   
-
+```
 use the service kill to kill tsim1.Write the command.  
-
+```
 rosservice call /kill tsim1
-
+```
 use the service reset to reset all the simulation. Write the command. 
-
+```
 rosservice call /reset tsim1
-
+```
