@@ -1,6 +1,9 @@
 # ros-corso
 ROS codice esercizi
 
+## Installazione ROS
+
+
 ## Esercizio 1
 
 ### Talker.py
