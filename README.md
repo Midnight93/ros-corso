@@ -87,9 +87,11 @@ catkin_make
 source ~/catkin_ws/devel/setup.bash
 ```
 
+
+# Esercizi
+
 -
-#Esercizi
--
+
 ## Esercizio 1
 
 ### Talker.py
