@@ -1,8 +1,94 @@
 # ros-corso
-ROS codice esercizi
 
-## Installazione ROS
 
+![Ros](media/image1.jpg)
+-
+
+# Installazione Ros
+
+### Setup sources.list
+```
+sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+```
+
+### Adding Key
+```
+sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
+```
+
+### Update package list
+```
+sudo apt-get update
+```
+
+### Installing ROS Kinetic Full Desktop Version
+```
+sudo apt-get install ros-kinetic-desktop-full
+```
+
+### Initialize Ros Dependencies
+```
+sudo rosdep init
+```
+```
+rosdep update
+```
+
+### Setting up ROS Environment
+```
+printf "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc
+```
+```
+source ~/.bashrc
+```
+
+### Installing Python Packages for ROS
+```
+sudo apt-get install python-rosinstall
+```
+```
+sudo apt install python-catkin-tools
+```
+
+### Other Important ROS Packages
+```
+sudo apt-get install ros-kinetic-tf-*
+```
+```
+sudo apt-get install ros-kinetic-pcl-msgs ros-kinetic-mav-msgs ros-kinetic-mavros ros-kinetic-octomap-* ros-kinetic-geographic-msgs libgeographic-dev
+```
+
+### Creating Catkin Workspace
+```
+mkdir catkin_ws
+```
+```
+cd catkin_ws
+```
+```
+mkdir -p src
+```
+```
+cd src
+```
+```
+catkin_init_workspace
+```
+```
+printf "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
+```
+```
+cd ~/catkin_ws
+```
+```
+catkin_make
+```
+```
+source ~/catkin_ws/devel/setup.bash
+```
+
+
+# Esercizi
 
 ## Esercizio 1
 
@@ -130,6 +216,7 @@ while not rospy.is_shutdown():
     rospy.loginfo(iot_sensor)
     pub.publish(iot_sensor)
     rate.sleep()
+
     i=i+1
 ```
 
@@ -138,3 +225,64 @@ while not rospy.is_shutdown():
 #### ROS Services
 
 ##### Service Node
+
+#### Open the Turtlesim simulator
+
+```
+roscsore
+```
+
+```
+rosrun turtlesim turtlesim_node
+```
+
+Display the list of services
+```
+rosservice list
+```
+What is the command that shows the information of the service /reset
+```
+rosservice info /reset
+```
+Write the result of the execution of the command for the service /reset
+```
+Node: /turtlesim
+
+URI: rosrpc://ace:xxx
+
+Type: std_srvs/Empty
+```
+Args:
+
+What is the command that shows the information of the service /kill
+```
+rosservice info /kill
+```
+Write the result of the execution of the command for the service /kill
+```
+Node: /turtlesim
+
+URI: rosrpc://ace:xx
+
+Type: turtlesim/Kill
+
+Args: name
+```
+
+
+What is the command that shows the content of message turtlesim/Kill of the /kill service?
+```
+rosservice info /kill
+```
+Spaw one additional turtle called tsim1. Write the command. 
+```
+rosservice call /spawn 7 7  0.55 tsim1   
+```
+use the service kill to kill tsim1.Write the command.  
+```
+rosservice call /kill tsim1
+```
+use the service reset to reset all the simulation. Write the command. 
+```
+rosservice call /reset tsim1
+```
