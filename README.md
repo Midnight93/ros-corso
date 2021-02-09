@@ -216,6 +216,7 @@ while not rospy.is_shutdown():
     rospy.loginfo(iot_sensor)
     pub.publish(iot_sensor)
     rate.sleep()
+
     i=i+1
 ```
 
@@ -224,3 +225,66 @@ while not rospy.is_shutdown():
 #### ROS Services
 
 ##### Service Node
+
+Open the Turtlesim simulator
+
+```
+roscsore
+```
+
+```
+rosrun turtlesim turtlesim_node
+```
+
+Display the list of services
+```
+rosservice list
+```
+What is the command that shows the information of the service /reset
+```
+rosservice info /reset
+```
+Write the result of the execution of the command for the service /reset
+```
+Node: /turtlesim
+
+URI: rosrpc://ace:xxx
+
+Type: std_srvs/Empty
+```
+Args:
+
+What is the command that shows the information of the service /kill
+```
+rosservice info /kill
+```
+Write the result of the execution of the command for the service /kill
+```
+Node: /turtlesim
+
+URI: rosrpc://ace:xx
+
+Type: turtlesim/Kill
+
+Args: name
+```
+
+
+What is the command that shows the content of message turtlesim/Kill of the /kill service?
+
+rosservice info /kill
+
+Spaw one additional turtle called tsim1. Write the command. 
+
+Spaw one additional turtle called tsim1. Write the command. 
+
+rosservice call /spawn 7 7  0.55 tsim1   
+
+use the service kill to kill tsim1.Write the command.  
+
+rosservice call /kill tsim1
+
+use the service reset to reset all the simulation. Write the command. 
+
+rosservice call /reset tsim1
+
