@@ -5,7 +5,7 @@ ROS codice esercizi
 
 - Talker.py
 
-`python
+```python
 
 import rospy
 from std_msgs.msg import String
@@ -24,10 +24,10 @@ if __name__ = '__main__'
     listener()
 
 
-`
+```
 - Listener.py
 
-`python
+```python
 
 import rospy
 from std_msgs.msg import String
@@ -51,16 +51,16 @@ while not rospy.is_shutdown():
     pub.publish(hello_str)
     rate.sleep()
     i=i+1
-`
+```
 
 ## Esercizio 2
 
 - IoT_message
 
-`python
+```python
 int32 id
 string name
 float32 temperature
 float32 humidity
-`
+```
 - Configurazione del CMakeLists.txt
