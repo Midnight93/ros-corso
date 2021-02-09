@@ -1,6 +1,10 @@
 # ros-corso
 ROS codice esercizi
 
+
+![Ros](media/image1.jpg)
+
+
 ## Installazione ROS
 
 
