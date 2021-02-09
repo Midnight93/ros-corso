@@ -275,8 +275,6 @@ What is the command that shows the content of message turtlesim/Kill of the /kil
 rosservice info /kill
 ```
 Spaw one additional turtle called tsim1. Write the command. 
-
-Spaw one additional turtle called tsim1. Write the command. 
 ```
 rosservice call /spawn 7 7  0.55 tsim1   
 ```
