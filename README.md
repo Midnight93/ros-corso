@@ -1,13 +1,95 @@
 # ros-corso
-ROS codice esercizi
 
 
 ![Ros](media/image1.jpg)
+-
 
+# Installazione Ros
 
-## Installazione ROS
+### Setup sources.list
+```
+sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+```
 
+### Adding Key
+```
+sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
+```
 
+### Update package list
+```
+sudo apt-get update
+```
+
+### Installing ROS Kinetic Full Desktop Version
+```
+sudo apt-get install ros-kinetic-desktop-full
+```
+
+### Initialize Ros Dependencies
+```
+sudo rosdep init
+```
+```
+rosdep update
+```
+
+### Setting up ROS Environment
+```
+printf "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc
+```
+```
+source ~/.bashrc
+```
+
+### Installing Python Packages for ROS
+```
+sudo apt-get install python-rosinstall
+```
+```
+sudo apt install python-catkin-tools
+```
+
+### Other Important ROS Packages
+```
+sudo apt-get install ros-kinetic-tf-*
+```
+```
+sudo apt-get install ros-kinetic-pcl-msgs ros-kinetic-mav-msgs ros-kinetic-mavros ros-kinetic-octomap-* ros-kinetic-geographic-msgs libgeographic-dev
+```
+
+### Creating Catkin Workspace
+```
+mkdir catkin_ws
+```
+```
+cd catkin_ws
+```
+```
+mkdir -p src
+```
+```
+cd src
+```
+```
+catkin_init_workspace
+```
+```
+printf "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
+```
+```
+cd ~/catkin_ws
+```
+```
+catkin_make
+```
+```
+source ~/catkin_ws/devel/setup.bash
+```
+
+-
+#Esercizi
+-
 ## Esercizio 1
 
 ### Talker.py
