@@ -90,8 +90,6 @@ source ~/catkin_ws/devel/setup.bash
 
 # Esercizi
 
--
-
 ## Esercizio 1
 
 ### Talker.py
