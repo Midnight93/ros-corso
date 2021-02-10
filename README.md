@@ -583,7 +583,7 @@ ROS Launch Params | http://wiki.ros.org/roslaunch/XML#Setting_parameters
 
 ### Turtlebot 3
 
-![Turtlebot3](media/turtlebot3_with_logo.png)
+![Turtlebot3](media/turtlebot3.png)
 
 ### Installazione
 
