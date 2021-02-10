@@ -361,4 +361,4 @@ if __name__ == "__main__":
 ```
 ## Tabella Arcotangente
 
-![arco](media/immagine.jpg)
+![arco](media/Immagine.jpg)
