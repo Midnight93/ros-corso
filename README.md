@@ -512,3 +512,6 @@ def gridClean(publisher):
         rotate(publisher, 20, 90, False)
     pass
 ```
+## Ros Networking
+
+[link to ROS NetworkSetup !](http://wiki.ros.org/ROS/NetworkSetup)
