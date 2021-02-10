@@ -370,7 +370,7 @@ if __name__ == "__main__":
 def move(velocity_publisher, speed, distance, is_forward):
         #declare a Twist message to send velocity commands
         velocity_message = Twist()
-        #get current location 
+        #get current location
         global x, y
         x0=x
         y0=y
@@ -382,20 +382,20 @@ def move(velocity_publisher, speed, distance, is_forward):
 
         distance_moved = 0.0
         loop_rate = rospy.Rate(10) # we publish the velocity at 10 Hz (10 times a second)    
-        
+
         while True :
                 rospy.loginfo("Turtlesim moves forwards")
                 velocity_publisher.publish(velocity_message)
 
                 loop_rate.sleep()
-                
+
                 distance_moved = abs(math.sqrt(((x-x0) ** 2) + ((y-y0) ** 2)))
                 print  (distance_moved)
                 print(x)
                 if  not (distance_moved<distance):
                     rospy.loginfo("reached")
                     break
-        
+
         #finally, stop the robot when the distance is moved
         velocity_message.linear.x =0
         velocity_publisher.publish(velocity_message)
@@ -403,7 +403,7 @@ def move(velocity_publisher, speed, distance, is_forward):
 ## Funzione Rotate
 ```python
 def rotate (velocity_publisher, angular_speed_degree, relative_angle_degree, clockwise):
-    
+
     velocity_message = Twist()
 
     angular_speed=math.radians(abs(angular_speed_degree))
@@ -429,7 +429,7 @@ def rotate (velocity_publisher, angular_speed_degree, relative_angle_degree, clo
         loop_rate.sleep()
 
 
-                       
+
         if  (current_angle_degree>relative_angle_degree):
             rospy.loginfo("reached")
             break
@@ -447,7 +447,7 @@ def go_to_goal(velocity_publisher, x_goal, y_goal):
     velocity_message = Twist()
 
     while (True):
-        K_linear = 0.5 
+        K_linear = 0.5
         distance = abs(math.sqrt(((x_goal-x) ** 2) + ((y_goal-y) ** 2)))
 
         linear_speed = distance * K_linear
@@ -468,16 +468,16 @@ def go_to_goal(velocity_publisher, x_goal, y_goal):
 ## Funzione setDesiredOrientation
 ```python
 def gridClean(publisher):
- 
+
     desired_pose = Pose()
     desired_pose.x = 1
     desired_pose.y = 1
     desired_pose.theta = 0
- 
+
     go_to_goal(publisher, 1,1)
- 
+
     setDesiredOrientation(publisher, 30, math.radians(desired_pose.theta))
- 
+
     for i in range(5):
         move(publisher, 2.0, 1.0, True)
         rotate(publisher, 20, 90, False)
@@ -493,16 +493,16 @@ def gridClean(publisher):
 ## Funzione gridClean
 ```python
 def gridClean(publisher):
- 
+
     desired_pose = Pose()
     desired_pose.x = 1
     desired_pose.y = 1
     desired_pose.theta = 0
- 
+
     go_to_goal(publisher, 1,1)
- 
+
     setDesiredOrientation(publisher, 30, math.radians(desired_pose.theta))
- 
+
     for i in range(5):
         move(publisher, 2.0, 1.0, True)
         rotate(publisher, 20, 90, False)
@@ -522,7 +522,7 @@ ROS NetworkSetup | http://wiki.ros.org/ROS/NetworkSetup
 Running ROS across multiple REMOTE machines | http://wiki.ros.org/ROS/Tutorials/MultipleRemoteMachines
 
 
-## Ros Launch 
+## Ros Launch
 
 ```bash
 roslaunch [name_package] [name_file_launch]
@@ -583,4 +583,6 @@ ROS Launch Params | http://wiki.ros.org/roslaunch/XML#Setting_parameters
 
 ### Turtlebot 3
 
+![Turtlebot3](media/turtlebot3_with_logo.png)
 
+### Installazione
