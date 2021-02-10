@@ -533,6 +533,6 @@ ROS Launch| http://wiki.ros.org/roslaunch
 ```xml
 <launch>
   <node name="turtlesim" pkg="turtlesim" type="turtlesim_node" />
-  <node name="clean_node" pkg="ros_essentials_cpp" type="turtlesim_cleaner.py" />
+  <node name="clean_node" pkg="ros_essentials_cpp" type="turtlesim_cleaner.py" output="screen" />
 </launch>
 ```
