@@ -517,4 +517,20 @@ def gridClean(publisher):
 Argomento | Link
 ------------ | -------------
 ROS NetworkSetup | http://wiki.ros.org/ROS/NetworkSetup
+Running ROS across multiple REMOTE machines | http://wiki.ros.org/ROS/Tutorials/MultipleRemoteMachines
 
+
+## Ros Launch 
+
+Argomento | Link
+------------ | -------------
+ROS Launch| http://wiki.ros.org/roslaunch
+
+### Esempio
+
+```xml
+<launch>
+  <node name="turtlesim" pkg="turtlesim" type="turtlesim_node" />
+  <node name="clean_node" pkg="ros_essentials_cpp" type="turtlesim_cleaner.py" />
+</launch>
+```
