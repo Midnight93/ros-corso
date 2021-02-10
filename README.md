@@ -524,6 +524,10 @@ Running ROS across multiple REMOTE machines | http://wiki.ros.org/ROS/Tutorials/
 
 ## Ros Launch 
 
+```bash
+roslaunch [name_package] [name_file_launch]
+```
+
 Argomento | Link
 ------------ | -------------
 ROS Launch| http://wiki.ros.org/roslaunch
@@ -534,5 +538,23 @@ ROS Launch| http://wiki.ros.org/roslaunch
 <launch>
   <node name="turtlesim" pkg="turtlesim" type="turtlesim_node" />
   <node name="clean_node" pkg="ros_essentials_cpp" type="turtlesim_cleaner.py" output="screen" />
+</launch>
+```
+## Ros Launch con i parametri
+
+### Esempio
+
+```xml
+<launch>
+  <group name="wg">
+    <include file="$(find pr2_alpha)/$(env ROBOT).machine" />
+    <include file="$(find 2dnav_pr2)/config/new_amcl_node.xml" />
+    <include file="$(find 2dnav_pr2)/config/base_odom_teleop.xml" />
+    <include file="$(find 2dnav_pr2)/config/lasers_and_filters.xml" />
+    <include file="$(find 2dnav_pr2)/config/map_server.xml" />
+    <include file="$(find 2dnav_pr2)/config/ground_plane.xml" />
+    <!-- The navigation stack and associated parameters -->
+    <include file="$(find 2dnav_pr2)/move_base/move_base.xml" />
+  </group>
 </launch>
 ```
