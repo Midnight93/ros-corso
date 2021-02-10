@@ -87,7 +87,7 @@ catkin_make
 source ~/catkin_ws/devel/setup.bash
 ```
 
-#Manda messaggio topic TurtleSim
+# Manda messaggio topic TurtleSim
 ```python
 rostopic pub -r 1 /turtle1/cmd_vel geometry_msg/Twist [TAB] [TAB]
 ```
@@ -359,6 +359,8 @@ if __name__ == "__main__":
     print "%s + %s = %s"%(x, y, s)
 
 ```
+## Esercizio 4
+
 ## Tabella Arcotangente
 
 ![arco](media/Immagine.jpg)
