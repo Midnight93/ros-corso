@@ -4,6 +4,13 @@
 
 # Installazione Ros
 
+Argomento | Link
+------------ | -------------
+ROS Melodic | http://wiki.ros.org/melodic
+ROS Kinetic | http://wiki.ros.org/kinetic
+ROS Noetic  | http://wiki.ros.org/noetic
+
+
 ### Setup sources.list
 ```bash
 sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
@@ -84,6 +91,27 @@ catkin_make
 ```bash
 source ~/catkin_ws/devel/setup.bash
 ```
+
+# Creazione di un package
+
+Argomento | Link
+------------ | -------------
+Creating a ROS Package | http://wiki.ros.org/ROS/Tutorials/CreatingPackage
+Building a ROS Package| http://wiki.ros.org/ROS/Tutorials/BuildingPackages
+
+# ROS Nodes
+
+Argomento | Link
+------------ | -------------
+Understanding ROS Nodes | http://wiki.ros.org/ROS/Tutorials/UnderstandingNodes
+rosnode| http://wiki.ros.org/rosnode
+
+# ROS Topic
+
+Argomento | Link
+------------ | -------------
+Understanding ROS Topics | http://wiki.ros.org/it/ROS/Tutorials/UnderstandingTopics
+rostopic|http://wiki.ros.org/rostopic 
 
 # Manda messaggio topic TurtleSim
 ```python
