@@ -514,4 +514,7 @@ def gridClean(publisher):
 ```
 ## Ros Networking
 
-[Clicca qui per vedere la documentazione(ROS NetworkSetup)](http://wiki.ros.org/ROS/NetworkSetup)
+Argomento | Link
+------------ | -------------
+ROS NetworkSetup | http://wiki.ros.org/ROS/NetworkSetup
+
