@@ -531,6 +531,8 @@ roslaunch [name_package] [name_file_launch]
 Argomento | Link
 ------------ | -------------
 ROS Launch| http://wiki.ros.org/roslaunch
+ROS Launch Includes | http://wiki.ros.org/ROS/Tutorials/Roslaunch%20tips%20for%20larger%20projects
+ROS Launch Params | http://wiki.ros.org/roslaunch/XML#Setting_parameters
 
 ### Esempio
 
