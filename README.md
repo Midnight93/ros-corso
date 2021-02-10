@@ -586,3 +586,11 @@ ROS Launch Params | http://wiki.ros.org/roslaunch/XML#Setting_parameters
 ![Turtlebot3](media/turtlebot3_with_logo.png)
 
 ### Installazione
+
+```bash
+$ cd
+$ cd catkin_ws/src
+$ git clone https://github.com/ROBOTIS-GIT/turtlebot3.git
+$ cd 
+$ cd catkin_ws/ && catkin_make
+```
