@@ -5,83 +5,83 @@
 # Installazione Ros
 
 ### Setup sources.list
-```
+```bash
 sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
 ```
 
 ### Adding Key
-```
+```bash
 sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
 ```
 
 ### Update package list
-```
+```bash
 sudo apt-get update
 ```
 
 ### Installing ROS Kinetic Full Desktop Version
-```
+```bash
 sudo apt-get install ros-kinetic-desktop-full
 ```
 
 ### Initialize Ros Dependencies
-```
+```bash
 sudo rosdep init
 ```
-```
+```bash
 rosdep update
 ```
 
 ### Setting up ROS Environment
-```
+```bash
 printf "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc
 ```
-```
+```bash
 source ~/.bashrc
 ```
 
 ### Installing Python Packages for ROS
-```
+```bash
 sudo apt-get install python-rosinstall
 ```
-```
+```bash
 sudo apt install python-catkin-tools
 ```
 
 ### Other Important ROS Packages
-```
+```bash
 sudo apt-get install ros-kinetic-tf-*
 ```
-```
+```bash
 sudo apt-get install ros-kinetic-pcl-msgs ros-kinetic-mav-msgs ros-kinetic-mavros ros-kinetic-octomap-* ros-kinetic-geographic-msgs libgeographic-dev
 ```
 
 ### Creating Catkin Workspace
-```
+```bash
 mkdir catkin_ws
 ```
-```
+```bash
 cd catkin_ws
 ```
-```
+```bash
 mkdir -p src
 ```
-```
+```bash
 cd src
 ```
-```
+```bash
 catkin_init_workspace
 ```
-```
+```bash
 printf "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
 ```
-```
+```bash
 cd ~/catkin_ws
 ```
-```
+```bash
 catkin_make
 ```
-```
+```bash
 source ~/catkin_ws/devel/setup.bash
 ```
 
