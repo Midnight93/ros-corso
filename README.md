@@ -542,7 +542,7 @@ ROS Launch| http://wiki.ros.org/roslaunch
 ```
 ## Ros Launch con i parametri
 
-### Esempio
+### Esempio con include
 
 ```xml
 <launch>
@@ -556,5 +556,29 @@ ROS Launch| http://wiki.ros.org/roslaunch
     <!-- The navigation stack and associated parameters -->
     <include file="$(find 2dnav_pr2)/move_base/move_base.xml" />
   </group>
+</launch>
+```
+
+### Esempio con parametri
+```xml
+<launch>
+  <param name="somestring1" value="bar" />
+  <!-- force to string instead of integer -->
+  <param name="somestring2" value="10" type="str" />
+
+  <param name="someinteger1" value="1" type="int" />
+  <param name="someinteger2" value="2" />
+
+  <param name="somefloat1" value="3.14159" type="double" />
+  <param name="somefloat2" value="3.0" />
+
+  <!-- you can set parameters in child namespaces -->
+  <param name="wg/childparam" value="a child namespace parameter" />
+
+  <!-- upload the contents of a file to the server -->
+  <param name="configfile" textfile="$(find roslaunch)/example.xml" />
+  <!-- upload the contents of a file as base64 binary to the server -->
+  <param name="binaryfile" binfile="$(find roslaunch)/example.xml" />
+
 </launch>
 ```
