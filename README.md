@@ -4,11 +4,11 @@
 
 # Installazione Ros
 
-Argomento | Link
------------- | -------------
-ROS Melodic | http://wiki.ros.org/melodic
-ROS Kinetic | http://wiki.ros.org/kinetic
-ROS Noetic  | http://wiki.ros.org/noetic
+Argomento | Link | Compatibilità
+------------ | ------------- | -------------
+ROS Melodic | http://wiki.ros.org/melodic | Ubuntu 18.04 LTS
+ROS Kinetic | http://wiki.ros.org/kinetic | Ubuntu 16.04 LTS
+ROS Noetic  | http://wiki.ros.org/noetic  | Ubuntu 20.04
 
 
 ### Setup sources.list
@@ -112,6 +112,13 @@ Argomento | Link
 ------------ | -------------
 Understanding ROS Topics | http://wiki.ros.org/it/ROS/Tutorials/UnderstandingTopics
 rostopic|http://wiki.ros.org/rostopic 
+
+# ROS Message 
+
+Argomento | Link
+------------ | -------------
+Creating a ROS msg and srv | http://wiki.ros.org/ROS/Tutorials/CreatingMsgAndSrv
+rosmsg |http://wiki.ros.org/rosmsg 
 
 # Manda messaggio topic TurtleSim
 ```python
