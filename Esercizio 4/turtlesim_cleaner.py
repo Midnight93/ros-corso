@@ -210,8 +210,10 @@ if __name__ == '__main__':
 
         #move(1.0, 2.0, False)
         #rotate(30, 90, True)
-        go_to_goal(1.0, 1.0)
-        #setDesiredOrientation(math.radians(90))
-       
+        #go_to_goal(1.0, 1.0)
+        #setDesiredOrientation(velocity_publisher, 30, 60)
+        #spiralClean(velocity_publisher, 0.2)
+        gridClean(velocity_publisher)
+        
     except rospy.ROSInterruptException:
         rospy.loginfo("node terminated.")
