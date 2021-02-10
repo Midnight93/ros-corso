@@ -278,7 +278,7 @@ What is the command that shows the content of message turtlesim/Kill of the /kil
 ```
 rosservice info /kill
 ```
-Spaw one additional turtle called tsim1. Write the command. 
+Spaw one additional turtle called tsim1. Write the command.
 ```
 rosservice call /spawn 7 7  0.55 tsim1   
 ```
@@ -286,7 +286,7 @@ use the service kill to kill tsim1.Write the command.
 ```
 rosservice call /kill tsim1
 ```
-use the service reset to reset all the simulation. Write the command. 
+use the service reset to reset all the simulation. Write the command.
 ```
 rosservice call /reset tsim1
 ```
@@ -316,7 +316,7 @@ def add_two_ints_server():
     s = rospy.Service('add_two_ints', AddTwoInts, handle_add_two_ints)
     print "Ready to add two ints."
     rospy.spin()
-    
+
 if __name__ == "__main__":
     add_two_ints_server()
 
@@ -359,3 +359,6 @@ if __name__ == "__main__":
     print "%s + %s = %s"%(x, y, s)
 
 ```
+## Tabella Arcotangente
+
+![arco](media/immagine.jpg)
