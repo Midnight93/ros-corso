@@ -87,6 +87,10 @@ catkin_make
 source ~/catkin_ws/devel/setup.bash
 ```
 
+#Manda messaggio topic TurtleSim
+```python
+rostopic pub -r 1 /turtle1/cmd_vel geometry_msg/Twist [TAB] [TAB]
+```
 
 # Esercizi
 
