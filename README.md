@@ -181,13 +181,44 @@ $ cd ~/catkin_ws && catkin_make
 
 ```bash
 
-cd 
-gedit .bashrc
+$ cd 
+$ gedit .bashrc
 
 ```
 
 ```bash
 
 Siamo in attesa di Gianluuuuuuuuu <3
+
+```
+### Turtlebot3 all'interno di un mondo vuoto ( Empty World Environment )
+
+```bash
+
+$ roslaunch turtlebo3_gazebo turtle3_empty_world.launch
+
+```
+
+### Turtlebot3 World Enviroment
+
+```bash
+
+$ roslaunch turtlebot3_gazebo turtlebo3_world.launch
+
+```
+
+### Turtlebot3 House Environment 
+
+```bash
+
+$ roslaunch turtlebot3_gazebo turtlebo3_house.launch
+
+```
+
+### Turtlebo3 RVIZ
+
+```bash
+
+roslaunch turtlebot3_gazebo turtlebot3_gazebo_rviz.launch
 
 ```
