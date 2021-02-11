@@ -222,3 +222,14 @@ $ roslaunch turtlebot3_gazebo turtlebo3_house.launch
 roslaunch turtlebot3_gazebo turtlebot3_gazebo_rviz.launch
 
 ```
+
+### Turtlebot3 SLAM for Map Building
+
+
+```bash
+
+$ roslaunch turtlebot3_slam turtlebot3_slam.launch slam_methods:=gmapping
+
+$ roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
+
+```
