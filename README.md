@@ -156,9 +156,38 @@ ROS Launch Params | http://wiki.ros.org/roslaunch/XML#Setting_parameters
 ### Installazione
 
 ```bash
+
+$ sudo apt-get update
+$ sudo apt-get upgrade
+
+```
+
+```bash
 $ cd
 $ cd catkin_ws/src
 $ git clone https://github.com/ROBOTIS-GIT/turtlebot3.git
 $ cd
 $ cd catkin_ws/ && catkin_make
+```
+
+### Installazione del simulatore del TurtleBot 3
+
+```bash
+$ cd ~/catkin_ws/src
+$ git clone https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git
+$ cd ~/catkin_ws && catkin_make
+```
+### Setting del file .bashrc 
+
+```bash
+
+cd 
+gedit .bashrc
+
+```
+
+```bash
+
+Siamo in attesa di Gianluuuuuuuuu <3
+
 ```
