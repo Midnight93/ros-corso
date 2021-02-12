@@ -334,7 +334,7 @@ $ roslaunch turtlebot3_gazebo turtle3_empty_world.launch
 
 ```bash
 
-$ roslaunch turtlebot3_gazebo turtlebo3_world.launch
+$ roslaunch turtlebot3_gazebo turtlebot3_world.launch
 
 ```
 
@@ -342,7 +342,7 @@ $ roslaunch turtlebot3_gazebo turtlebo3_world.launch
 
 ```bash
 
-$ roslaunch turtlebot3_gazebo turtlebo3_house.launch
+$ roslaunch turtlebot3_gazebo turtlebot3_house.launch
 
 ```
 
