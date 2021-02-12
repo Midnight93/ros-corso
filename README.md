@@ -326,7 +326,7 @@ export SVGA_VGPU10=0
 
 ```bash
 
-$ roslaunch turtlebo3_gazebo turtle3_empty_world.launch
+$ roslaunch turtlebot3_gazebo turtle3_empty_world.launch
 
 ```
 
