@@ -188,7 +188,18 @@ $ gedit .bashrc
 
 ```bash
 
-Siamo in attesa di Gianluuuuuuuuu <3
+alias burger='export TURTLEBOT3_MODEL=burger'
+alias waffle='export TURTLEBOT3_MODEL=waffle'
+alias tb3fake='roslaunch turtlebot3_fake turtlebot3_fake.launch'
+alias tb3teleop='roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch'
+alias tb3='roslaunch turtlebot3_gazebo turtlebot3_empty_world.launch'
+alias tb3maze='roslaunch turtlebot3_gazebo turtlebot3_world.launch'
+alias tb3house='roslaunch turtlebot3_gazebo turtlebot3_house.launch'
+
+source /opt/ros/kinetic/setup.bash
+source /home/ros/catkin_ws/devel/setup.bash
+export TURTLEBOT3_MODEL=waffle
+export SVGA_VGPU10=0
 
 ```
 ### Turtlebot3 all'interno di un mondo vuoto ( Empty World Environment )
